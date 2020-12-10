@@ -27,7 +27,6 @@ img{
 }
 p{
     font-size: 1.4rem;
-    color: white;
     text-align: left;
     line-height: 1.9rem;
 }
@@ -40,6 +39,7 @@ p{
     letter-spacing: .2rem;
     text-align: center;
 }
+
 
 
 
@@ -78,6 +78,25 @@ p{
     animation: text_reveal .5s ease forwards;
     animation-delay: 1s;
 }
+#hero .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 2rem;
+    font-weight: bold;
+
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top:30px;
+    transition:.9s ease;
+    transition-property: background-color, color;
+}
+#hero .cta:hover{
+    color: black;
+    background-color: white;
+}
 #hero h1:nth-child(1){
     animation-delay: 1.5s;
 }
@@ -94,7 +113,7 @@ p{
     left: 0;
     height: 100%;
     width: 0;
-    background-color: crimson;
+    background-color: white;
     animation: text_reveal_box 1s ease;
     animation-delay: 1s;
 }
@@ -106,25 +125,6 @@ p{
 }
 #hero h1:nth-child(3) span{
     animation-delay: 3s;
-}
-#hero .cta{
-    display: inline-block;
-    padding: 10px 30px;
-    color: white;
-    background-color: transparent;
-    border: 2px solid crimson;
-    font-size: 2rem;
-    font-weight: bold;
-
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    margin-top:30px;
-    transition:.5s ease;
-    transition-property: background-color, color;
-}
-#hero .cta:hover{
-    color: white;
-    background-color: crimson;
 }
 /*END HERO SECTION*/
 
@@ -183,6 +183,9 @@ p{
     margin-bottom: 10px;
     text-transform: uppercase;
     text-align: left;
+}
+#services .service-item p{
+    color: white;
 }
 
 /*END SERVICE SECTION*/
@@ -268,6 +271,77 @@ p{
 
 
 
+/*ABOUT SECTION*/
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+#about .col-left{
+    width: 250px;
+    height: 340px;
+}
+#about .col-right{
+    width: 100%;
+}
+#about .col-right h2{
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    letter-spacing: .2rem;
+}
+#about .col-right p{
+    margin-bottom: 20px;
+    text-align: center;
+}
+#about .col-right .cta{
+    color: black;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+#about .col-right .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: black;
+    background-color: transparent;
+    border: 2px solid black;
+    font-size: 2rem;
+    font-weight: bold;
+
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top:30px;
+    transition:.9s ease;
+    transition-property: background-color, color;
+}
+#about .col-right .cta:hover{
+    color: white;
+    background-color: black;
+}
+
+#about .col-left .about-img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 10px solid white;
+}
+#about .col-left .about-img::after{
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid black;
+    z-index: -1;
+}
+/*END ABOUT SECTION*/
+
+
+
+
 
 /*KEYFRAMES*/
 @keyframes text_reveal_box{
@@ -287,7 +361,7 @@ p{
 }
 @keyframes text_reveal_name{
     100% {
-        color: crimson;
+        color: white;
         font-weight: 500px;
     }
 }
